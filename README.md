@@ -1,7 +1,7 @@
 # Dorisoy.RobotArm - 机械臂3D仿真系统
 
 基于 C# .NET8.0/WPF 和 HelixToolkit 的工业机器人3D仿真系统，支持正运动学和逆运动学计算。
-<img src="https://github.com/Gabryxx7/Dorisoy.RobotArm/assets/77509791/6918866a-4969-4943-996a-9944949c6f56" alt="Dorisoy.RobotArm">
+<img src="https://github.com/dorisoy/Dorisoy.RobotArm/blob/main/Screen/screen.png"/>
 
 ## 📋 项目简介
 
