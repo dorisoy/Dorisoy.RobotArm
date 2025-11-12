@@ -139,7 +139,6 @@ public partial class MainWindow : Window
         InitializeComponent();
         
         // 获取3D模型文件的基础路径
-        // .NET 8 的输出路径是 bin\Debug\net8.0-windows，需要向上3级到达项目根目录
         var currentDir = Directory.GetCurrentDirectory();
         var projectRoot = Directory.GetParent(currentDir)?.Parent?.Parent?.FullName;
         
@@ -247,8 +246,8 @@ public partial class MainWindow : Window
         try
         {
             // 创建模型导入器和关节列表
-            ModelImporter import = new ModelImporter();
-            joints = new List<Joint>();
+            ModelImporter import = new();
+            joints = [];
 
             // 遍历所有模型文件，加载并设置材质
             foreach(string modelName in modelsNames)
@@ -256,9 +255,9 @@ public partial class MainWindow : Window
                 // 创建材质组（发光、漫反射、高光）
                 var materialGroup = new MaterialGroup();
                 Color mainColor = Colors.White;  // 主色调：白色
-                EmissiveMaterial emissMat = new EmissiveMaterial(new SolidColorBrush(mainColor));  // 发光材质
-                DiffuseMaterial diffMat = new DiffuseMaterial(new SolidColorBrush(mainColor));    // 漫反射材质
-                SpecularMaterial specMat = new SpecularMaterial(new SolidColorBrush(mainColor), 200); // 高光材质，光泽度200
+                EmissiveMaterial emissMat = new(new SolidColorBrush(mainColor));  // 发光材质
+                DiffuseMaterial diffMat = new(new SolidColorBrush(mainColor));    // 漫反射材质
+                SpecularMaterial specMat = new(new SolidColorBrush(mainColor), 250); // 高光材质，光泽度250
                 materialGroup.Children.Add(emissMat);
                 materialGroup.Children.Add(diffMat);
                 materialGroup.Children.Add(specMat);
@@ -773,7 +772,7 @@ public partial class MainWindow : Window
     {
         if (timer1.Enabled)  // 如果已经在运行，则停止
         {
-            button.Content = "Go to position";  // 按钮文字改为"前往位置"
+            button.Content = "前往位置";  // 按钮文字改为"前往位置"
             isAnimating = false;
             timer1.Stop();
             movements = 0;
@@ -782,7 +781,7 @@ public partial class MainWindow : Window
         {
             geom.Transform = new TranslateTransform3D(reachingPoint);  // 将调试球移到目标位置
             movements = 5000;  // 设置最大迭代次数
-            button.Content = "STOP";  // 按钮文字改为"停止"
+            button.Content = "停止";  // 按钮文字改为"停止"
             isAnimating = true;
             timer1.Start();  // 启动定时器
         }
