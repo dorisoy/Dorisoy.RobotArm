@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- 目标框架：.NET 8 Windows -->
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <!-- 启用 WPF 支持 -->
+    <UseWPF>true</UseWPF>
+    <!-- 启用 Windows Forms 支持（用于 Timer） -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- 输出类型：Windows 应用程序 -->
+    <OutputType>WinExe</OutputType>
+    <!-- 程序集名称 -->
+    <AssemblyName>RobotArmHelix</AssemblyName>
+    <!-- 根命名空间 -->
+    <RootNamespace>RobotArmHelix</RootNamespace>
+    <!-- 启用可空引用类型 -->
+    <Nullable>disable</Nullable>
+    <!-- 项目 GUID（保持兼容性） -->
+    <ProjectGuid>{E14738AE-AF61-4F59-841E-0A81B4D85893}</ProjectGuid>
+  </PropertyGroup>
+
+  <!-- NuGet 包引用 -->
+  <ItemGroup>
+    <PackageReference Include="HelixToolkit.Wpf" Version="3.1.1" />
+  </ItemGroup>
+
+  <!-- 3D 模型文件：设置为复制到输出目录 -->
+  <ItemGroup>
+    <None Update="3D_Models\*.stl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
