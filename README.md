@@ -1,12 +1,11 @@
-# RobotArmHelix - 机械臂3D仿真系统
+# Dorisoy.RobotArm - 机械臂3D仿真系统
 
-基于 C# WPF 和 HelixToolkit 的工业机器人3D仿真系统，支持正运动学和逆运动学计算。
+基于 C# .NET8.0/WPF 和 HelixToolkit 的工业机器人3D仿真系统，支持正运动学和逆运动学计算。
 
-![机械臂仿真界面](https://raw.githubusercontent.com/Gabryxx7/RobotArmHelix/master/Images/robotArmHelix.png)
 
 ## 📋 项目简介
 
-这是一个功能完整的机器人机械臂3D仿真应用程序，使用 C# 和 WPF 开发，通过 [HelixToolkit](https://github.com/helix-toolkit/helix-toolkit) 实现高性能3D渲染。项目已成功迁移至 **.NET 8**，支持最新的开发工具和运行时环境。
+这是一个功能完整的机器人机械臂3D仿真应用程序，使用 C# 和 WPF 开发，通过 [HelixToolkit](https://github.com/helix-toolkit/helix-toolkit) 实现高性能3D渲染。
 
 ### ✨ 核心功能
 
@@ -52,8 +51,8 @@ dotnet --version
 ### 2. 克隆或下载项目
 
 ```bash
-git clone https://github.com/Gabryxx7/RobotArmHelix.git
-cd RobotArmHelix
+git clone https://github.com/Gabryxx7/Dorisoy.RobotArm.git
+cd Dorisoy.RobotArm
 ```
 
 或直接下载 ZIP 并解压。
@@ -61,7 +60,7 @@ cd RobotArmHelix
 ### 3. 还原依赖项
 
 ```bash
-cd RobotArmHelix
+cd Dorisoy.RobotArm
 dotnet restore
 ```
 
@@ -85,7 +84,7 @@ dotnet run
 
 或者直接运行生成的可执行文件：
 ```bash
-.\bin\Release\net8.0-windows\RobotArmHelix.exe
+.\bin\Release\net8.0-windows\Dorisoy.RobotArm.exe
 ```
 
 ## 📖 使用说明
@@ -151,8 +150,8 @@ double DistanceThreshold = 20;     // 到达目标的距离阈值（单位：毫
 ## 📁 项目结构
 
 ```
-RobotArmHelix/
-├── RobotArmHelix/
+Dorisoy.RobotArm/
+├── Dorisoy.RobotArm/
 │   ├── 3D_Models/              # STL 模型文件
 │   │   ├── IRB4600_*.stl      # IRB4600 型号模型
 │   │   └── IRB6700_*.stl      # IRB6700 型号模型
@@ -162,7 +161,7 @@ RobotArmHelix/
 │   ├── App.xaml.cs
 │   ├── MainWindow.xaml        # 主窗口UI
 │   ├── MainWindow.xaml.cs     # 主窗口逻辑（核心代码）
-│   └── RobotArmHelix.csproj   # 项目文件
+│   └── Dorisoy.RobotArm.csproj   # 项目文件
 └── README.md
 ```
 
