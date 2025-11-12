@@ -236,24 +236,6 @@ changeModelColor(joints[0], Colors.Blue);  // 将关节1改为蓝色
 - [ABB IRB 4600 CAD 模型](http://new.abb.com/products/robotics/industrial-robots/irb-4600/irb-4600-cad)
 - [RAV2 项目](https://github.com/karthikram827/RAV2) - 原始灵感来源
 
-## 📝 版本历史
-
-- **v2.0** (2024) - 迁移至 .NET 8，添加详细中文注释，优化路径处理
-- **v1.0** (2017) - 初始版本，支持 .NET Framework 4.8.1
-
-## 📄 许可证
-
-本项目基于原作者 Gabriele Marini (Gabryxx7) 的开源项目。
-
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！
-
-## 👨‍💻 原作者
-
-- **Gabriele Marini (Gabryxx7)** - 原始项目开发者
-- GitHub: [@Gabryxx7](https://github.com/Gabryxx7)
-
----
-
-**注意**：本项目仅供学习和研究使用。3D模型版权归 ABB 公司所有。
